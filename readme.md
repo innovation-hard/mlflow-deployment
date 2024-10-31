@@ -27,14 +27,11 @@ mlflow models serve -m runs:/ee548ee836bc4bb49df6f1021d7e3c39/model -p 1234 --en
 mlflow models serve -m runs:/ee548ee836bc4bb49df6f1021d7e3c39/model -p 1234 --env-manager conda
 ```
 
-
 https://mlflow.org/docs/latest/deployment/deploy-model-locally.html#serving-frameworks
 
 ```bash
 mlflow models serve -m runs:/123813544bb94f3082e421c83ba7def8/model -p 1234 --no-conda
 ```
-
-
 
  ```bash
  curl -X POST -H "Content-Type:application/json" --data '{"inputs": [[14.23, 1.71, 2.43, 15.6, 127.0, 2.8, 3.06, 0.28, 2.29, 5.64, 1.04, 3.92, 1065.0]]}' http://127.0.0.1:1234/invocations
